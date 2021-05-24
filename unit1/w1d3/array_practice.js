@@ -177,8 +177,24 @@
     //shift: removes the first item of an array
         // favMovies.shift();
         // console.log(favMovies)
-    //splice: 
+    //splice: method adds/removes items to/from an array, and returns the removed item
+    //sort:The sort() method sorts the items of an array//
+        
+    //### Multi-dimentional Arrays
 
+    //Array elements can be can be other arrays. 
+    
+    const pairs = [['Snoopy', 'Linius'],["Peppermint Patty", "Woodstock"]];
+    
+    // to get "Peppermint Patty"
+
+    // console.log(pairs[1][0]);
+
+    const confectionary = [["mounds", "almond joy"], ["lindt truffles", "easter egg", ["kitkat bar 1", "kitkat bar 2", 'kitkat bar 3', "kitkat bar 4"]]];
+
+
+    //to access 'kitkat bar 3'
+    console.log(confectionary[1][0,2][2]);
 
 
     
