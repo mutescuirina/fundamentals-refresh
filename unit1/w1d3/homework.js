@@ -42,16 +42,16 @@ const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
 
 //1. Plantee just had her birthday; change Plantee's array to reflect her being a year older.
 plantee[2] = 5001;
-console.log(plantee);
+// console.log(plantee);
 //2. Change Wolfy's hometown from "Yukon Territory" to "Gotham City".
 wolfy[3] = "Gotham City";
-console.log(wolfy);
+// console.log(wolfy);
 //3. Give D'Art a second hometown by adding "Hawkins"
 dart.unshift('Hawkins');
-console.log(dart);
+// console.log(dart);
 //4. Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the `wolfy` array and replace it with "Gameboy".
 wolfy[0] = "Gameboy";
-console.log(wolfy);
+// console.log(wolfy);
 
 
 //#### Yell at the Ninja Turtles
@@ -59,5 +59,58 @@ console.log(wolfy);
 
 ninjaTurtles = ['Donatello', 'Leonardo','Raphael', 'Michaelangelo']
 for (let x of ninjaTurtles) {
-    console.log(x.toUpperCase());
+    // console.log(x.toUpperCase());
 }
+
+//#### Methods, Revisited
+
+    //Here is a list of favMovies:
+
+    const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+    //- Console log:  the index of `Titanic`
+        // console.log(favMovies[8]);
+
+    //1. use the `.sort` method Thought question: what did this do to the array? Did it permanently alter it?
+        // console.log(favMovies.sort());
+        // console.log(favMovies);
+        // it displays in alfabetic order and it changed the original array
+    
+    //2. Use the method `pop`
+        // console.log(favMovies.pop());
+        // console.log(favMovies);
+        // it removes the last element and an array and it displays it. 
+
+    //3. `push` "Guardians of the Galaxy"
+        // console.log(favMovies.push('Guardians of the Galaxy'));
+        // console.log(favMovies);
+        // it add elements to the end of the array
+
+    //4. Reverse the array
+        // console.log(favMovies.reverse());
+        // console.log(favMovies);
+        // it reverses the order of the array and alters the original one as well
+
+    //5. Use the `shift` method
+        // console.log(favMovies.shift());
+        // console.log(favMovies);
+        // it removes the first element in the array
+
+    //6. `unshift` - what does it return?
+        // console.log(favMovies.unshift('My brains'));
+        // console.log(favMovies);
+
+    //7. `splice` "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
+        // console.log(favMovies.indexOf('Django Unchained'));
+        // favMovies.splice(3,1,"Avatar");
+        // console.log(favMovies);
+    // the first number indicates the index position where you want to start the splice process, then the second nuumber indicates how many items you want to remove, separated by a comma the third is a list of item you want to insert
+
+    //8. `slice` the last half of the array (challenge yourself and try to programatically determine the middle of the array  rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+        console.log(Math.floor(favMovies.length/2))
+        slicedArr = favMovies.slice(9);
+        console.log(slicedArr)
+    //store the value of your `slice` in a variable, console.log it - Thought question: what is going on here?
+        //console.log your final results
+// It did not alter the original array it just took the part we sliced from it!///////////
+    console.log(favMovies.indexOf("Jaws"))
