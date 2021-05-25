@@ -152,11 +152,77 @@ const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 //- Find the median number in the following `nums` array, then console.log that number.
 //-  _hint_ if you check the length of the array / 2, you might get not get a whole number. In which case, look into `Math.floor( // something )`
 
-const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+        // const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
-console.log(Math.floor(nums.length/2));
-
-
+        // console.log(Math.floor(nums.length/2));
 
 
+//#### Return of the Closets
 
+//Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "GA hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+
+
+  // Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+  
+
+//#### Alien Attire
+//1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable `kristynsShoe`. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+ let kristynsShoe = kristynsCloset[0];
+//  console.log(kristynsShoe);
+thomsCloset[2].push(kristynsShoe);
+console.log(thomsCloset[2])
+
+//#### Dress Us Up
+//1. Modify your code to put together **3 separate outfits** for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+
+for (i = 0; i <3; i++) {
+    let hisShirts = thomsCloset[0];
+    // console.log(hisShirts);
+    let hisPans = thomsCloset[1];
+    let hisAccesories = thomsCloset[2];
+    let hisShirt = hisShirts[Math.floor(Math.random() * hisShirts.length)];
+    let hisOnePants = hisPans[Math.floor(Math.random() * hisPans.length)];
+    let hisAccesory = hisAccesories[Math.floor(Math.random() * hisAccesories.length)];
+    let herOutfits = kristynsCloset[Math.floor(Math.random() * kristynsCloset.length)];
+
+    if(i === 0) {
+        console.log("Fist class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.');
+    }
+    
+        else if (i === 1) {
+            console.log("Second class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.');
+        }
+        else {
+            console.log("Third class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.')
+        }
+}
