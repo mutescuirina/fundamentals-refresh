@@ -107,10 +107,35 @@ for (let x of ninjaTurtles) {
     // the first number indicates the index position where you want to start the splice process, then the second nuumber indicates how many items you want to remove, separated by a comma the third is a list of item you want to insert
 
     //8. `slice` the last half of the array (challenge yourself and try to programatically determine the middle of the array  rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
-        console.log(Math.floor(favMovies.length/2))
-        slicedArr = favMovies.slice(9);
-        console.log(slicedArr)
+        // console.log(Math.floor(favMovies.length/2))
+        // slicedArr = favMovies.slice(9);
+        // console.log(slicedArr)
     //store the value of your `slice` in a variable, console.log it - Thought question: what is going on here?
         //console.log your final results
-// It did not alter the original array it just took the part we sliced from it!///////////
-    console.log(favMovies.indexOf("Jaws"))
+// // It did not alter the original array it just took the part we sliced from it!///////////
+//     console.log(favMovies.indexOf("Ja"))
+
+//#### Where is Waldo
+
+//* With the following multi-dimensional array
+
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+
+//* Remove Eggbert (hint look at the slice/splice method(s))
+    // whereIsWaldo.splice(1,1);
+    // console.log(whereIsWaldo);
+
+//* Change "Neff" to "No One"
+    // whereIsWaldo[2][0,2] = "No One";
+    // console.log(whereIsWaldo);
+
+//Access and console.log "Waldo"
+    console.log(whereIsWaldo[3][1][1]);
+
+
+
+
+
+
