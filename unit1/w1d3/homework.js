@@ -137,17 +137,24 @@ const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 
 //#### Excited Kitten
 //1. Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
-for (i = 0; i <=20; i++) {
-    if (i % 2 === 0) {
-        arrItems = ["...human...why you taking pictures of me?...","...the catnip made me do it...","...why does the red dot always get away..."]
-         let item = arrItems[Math.floor(Math.random() * arrItems.length)];
-        // console.log("Love me, pet me! HSSSSSS!");
-        console.log(item);
-    }
-   
-}
-
 //2. For every **even** number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
+// for (i = 0; i <=20; i++) {
+//     if (i % 2 === 0) {
+//         arrItems = ["...human...why you taking pictures of me?...","...the catnip made me do it...","...why does the red dot always get away..."]
+//          let item = arrItems[Math.floor(Math.random() * arrItems.length)];
+//         // console.log("Love me, pet me! HSSSSSS!");
+//         console.log(item);
+//     }
+   
+// }
+
+//#### Find the Median
+//- Find the median number in the following `nums` array, then console.log that number.
+//-  _hint_ if you check the length of the array / 2, you might get not get a whole number. In which case, look into `Math.floor( // something )`
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+console.log(Math.floor(nums.length/2));
 
 
 
