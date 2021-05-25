@@ -200,29 +200,45 @@ const thomsCloset = [
  let kristynsShoe = kristynsCloset[0];
 //  console.log(kristynsShoe);
 thomsCloset[2].push(kristynsShoe);
-console.log(thomsCloset[2])
+// console.log(thomsCloset[2])
 
 //#### Dress Us Up
 //1. Modify your code to put together **3 separate outfits** for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
 
-for (i = 0; i <3; i++) {
-    let hisShirts = thomsCloset[0];
-    // console.log(hisShirts);
-    let hisPans = thomsCloset[1];
-    let hisAccesories = thomsCloset[2];
-    let hisShirt = hisShirts[Math.floor(Math.random() * hisShirts.length)];
-    let hisOnePants = hisPans[Math.floor(Math.random() * hisPans.length)];
-    let hisAccesory = hisAccesories[Math.floor(Math.random() * hisAccesories.length)];
-    let herOutfits = kristynsCloset[Math.floor(Math.random() * kristynsCloset.length)];
+// for (i = 0; i <3; i++) {
+//     let hisShirts = thomsCloset[0];
+//     // console.log(hisShirts);
+//     let hisPans = thomsCloset[1];
+//     let hisAccesories = thomsCloset[2];
+//     let hisShirt = hisShirts[Math.floor(Math.random() * hisShirts.length)];
+//     let hisOnePants = hisPans[Math.floor(Math.random() * hisPans.length)];
+//     let hisAccesory = hisAccesories[Math.floor(Math.random() * hisAccesories.length)];
+//     let herOutfits = kristynsCloset[Math.floor(Math.random() * kristynsCloset.length)];
 
-    if(i === 0) {
-        console.log("Fist class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.');
-    }
+//     if(i === 0) {
+//         console.log("Fist class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.');
+//     }
     
-        else if (i === 1) {
-            console.log("Second class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.');
-        }
-        else {
-            console.log("Third class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.')
-        }
-}
+//         else if (i === 1) {
+//             console.log("Second class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.');
+//         }
+//         else {
+//             console.log("Third class Kristyn will be wearing " + herOutfits + " and Thom will be wearing a " + hisShirt + "," + hisOnePants + ", and " + hisAccesory +'.')
+//         }
+// }
+//#### Dirty Laundry
+//Continue looking at the closet arrays:
+    //1. Time to do laundry - loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
+
+    // kristynsCloset.forEach(item => console.log(item + "WHIRR: Now washing"))
+
+    //#### Inventory
+    //2. Thom wants to do inventory on his closet. Using **bracket notation**, log the arrays containing all of Thom's shirts, pants, and accessories.
+
+        
+    console.log(thomsCloset[0]);
+    console.log(thomsCloset[1]);
+    console.log(thomsCloset[2]);
+
+
+
