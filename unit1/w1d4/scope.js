@@ -53,13 +53,13 @@ const checkSquare = (num) => {
 }
 // console.log(checkSquare(60));
 
-const checkToLimit =(n) => {
-    for (i = 1; i < n; i++){
-        console.log(checkSquare(i));
-    }
+// const checkToLimit =(n) => {
+//     for (i = 1; i < n; i++){
+//         console.log(checkSquare(i));
+//     }
    
-}
-console.log(checkToLimit(100));
+// }
+// console.log(checkToLimit(100));
 
 
 
@@ -67,4 +67,49 @@ console.log(checkToLimit(100));
 //     if(isPrime(i)) console.log(i);
 // }
 
- 
+
+//## Use block-scoping with loops
+
+//Using `let` within a for loop control panel scopes the variable to the block.
+
+// for ( let i=0; i < 100; i++) {
+//     console.log('Inside the block:', i);
+// }
+
+// console.log('Outside the block:',i);
+
+// for( var i = 0; i < 100; i++) {
+//     console.log('Inside the block:',i)
+// }
+
+// console.log('outside the block:',i)
+   
+
+//## Define recursion
+
+//A function has access to **itself** because it is always declared in a scope accessible to itself.
+
+//When a function invokes itself, this is called **recursion**.
+
+const func = () => {
+    return func();
+}
+//This will create a **loop**. This particular loop is **infinite** because it has no **exit condition**.
+
+const countdown = (num) => {
+    if (num !=0) {
+        console.log(num)
+        countdown(num -1);
+    } else {
+        return
+    }
+}
+countdown(9);
+
+// Difine pollution
+
+// You do not want your global scope to be polluted. There are reasons to not polluting your global scope.
+//* Global variables can be overwritten or misconstrued elsewhere
+//* Potentially causing unwanted, hard to track bugs
+//* Namespace
+//* Memory / garbage collection
