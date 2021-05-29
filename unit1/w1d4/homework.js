@@ -30,26 +30,87 @@
 // 4.## Sum Array 
 
 //Write a function `sumArray` that takes an **array** as an argument.
-const sumArray = (arr) => {
-    let sum = 0;
-    for (i = 0; i < arr.length; i++) {
-       sum += arr[i];
-    }
-    return sum
-    
-}
-console.log(sumArray([1, 2, 3, 4, 5, 6]));
 //The array should contain numbers. The function should return the sum of the numbers in the array.
 //Use a _for loop_ within the function to iterate over the array and sum the contents.
 //Use a variable such as 
-
 //```javascript
 //let sum = 0;
-
-
 //that will **accumulate** value within the loop.
 //Expected result:
-
 // javascript
 //console.log(sumArray([1, 2, 3, 4, 5, 6]));
 // => 21
+
+// const sumArray = (arr) => {
+//     let sum = 0;
+//     for (i = 0; i < arr.length; i++) {
+//        sum += arr[i];
+//     }
+//     return sum
+    
+// }
+// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+//### Step One
+//Write a function called `checkPrime` that will test whether a number is Prime. The function will return true (Boolean) if Prime, false if not.
+//_Hint:_ Check every number up to the square root. To do this, try a _for loop_.
+//### Step Two
+//Write another function called `printPrimes` that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with `printPrimes(97)`, it will print all the Prime numbers up to and including 97.
+//This function can **call on** the previous `checkPrime` function.
+
+// const checkPrime = (num) => {
+//     let sqrtNum = Math.floor(Math.sqrt(num));
+//     let prime = num != 1;
+//     for (let i = 2; i < sqrtNum+1; i++) {
+//         if (num % 1 === 0) {
+//            return prime = false
+          
+//         } 
+//     }
+//     return prime
+// }
+// console.log(checkPrime(19));
+
+// const printPrimes = (nums) => {
+//     for ( let i = 0; i < nums;  i++) {
+//         return checkPrime(i)
+//     }
+//     return checkPrime(i)
+// }
+// console.log(printPrimes(19));
+
+//## Rock Paper Scissors
+moves = ['scissors', 'rock', 'paper'];
+
+const randomMove = () => {
+    for (let i = 0; i < moves.length; i++) {
+        return moves[Math.floor(Math.random() * moves.length)];
+    }
+}
+// console.log(randomMove());
+// console.log(randomMove());
+
+const rockPaperScissors = (user, computer) => {
+    user = randomMove();
+    computer = randomMove();
+    
+    if (user === computer) {
+        return 'User chose ' + user +', and the computer chose ' +  computer +'.' + ' It is a tie.'
+    } else if (user === "scissors" && computer === "rock" )  {
+            return 'User chose ' + user +', and the computer chose ' +  computer +'.' + " Computer has won this round!"
+
+        } else if (user === "rock" && computer === "paper") { 
+            return 'User chose ' + user +', and the computer chose ' +  computer +'.' + " Computer has won this round!"
+
+        } else if (user === "paper" && computer === "scissors") {
+            return 'User chose ' + user +', and the computer chose ' +  computer +'.' + " Computer has won this round!"
+        }
+            else {
+                return 'User chose ' + user +', and the computer chose ' +  computer +'.' +  " The computer has won this round!"
+            }
+        
+            
+}
+console.log(rockPaperScissors());
+
+
