@@ -105,7 +105,7 @@ const rockPaperScissors = (user, computer) => {
         } else if (user === "paper" && computer === "scissors") {
             return 'User chose ' + user +', and the computer chose ' +  computer +'.' + " Computer has won this round!"
         }
-            else {
+            else if(user === "paper" && computer === "scissors")  {
                 return 'User chose ' + user +', and the computer chose ' +  computer +'.' +  " The computer has won this round!"
             }
         
